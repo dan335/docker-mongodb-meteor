@@ -27,7 +27,7 @@ echo "--- Running rs.conf() ---"
 mongo admin --eval "rs.conf()"
 sleep 5
 echo "--- Creating oplog user ---"
-mongo admin --eval "db.createUser({ user:'oplogger', pwd:'oplogger', roles:[{rold:'read', db:'local'}] });"
+mongo admin --eval "db.createUser({ user:'oplogger', pwd:'oplogger', roles:[{role:'read', db:'local'}] });"
 sleep 5
 echo "--- Running db.shutdownServer({force: 1}); ---"
 mongo admin --eval "db.shutdownServer({force: 1});"
