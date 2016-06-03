@@ -1,5 +1,5 @@
 #!/bin/bash
 
 ./replInit.sh
-cmd="mongod --directoryperdb --storageEngine wiredTiger"
+cmd="mongod --replSet rs0 --directoryperdb --storageEngine wiredTiger"
 exec $cmd
