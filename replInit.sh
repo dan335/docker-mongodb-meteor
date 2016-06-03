@@ -11,7 +11,7 @@ OPLOG_SIZE=$(($availDiskSpace*5/100))
 
 echo "Creating replica set rs0 with oplog size ${OPLOG_SIZE}"
 
-mongod --replSet rs0 --oplogSize ${MJSM_OPLOG_SIZE} --directoryperdb --storageEngine wiredTiger &
+mongod --replSet rs0 --oplogSize ${OPLOG_SIZE} --directoryperdb --storageEngine wiredTiger &
 
 # wait for mongod to start
 RET=1
