@@ -4,4 +4,4 @@ MAINTAINER Zadkiel Aslafy-Aharonian
 COPY repl_init.sh /
 RUN chmod +x /repl_init.sh
 
-CMD sh -c '/repl_init.sh; /root/run.sh'
+ENTRYPOINT sh -c '/repl_init.sh; /root/run.sh mongodb'
