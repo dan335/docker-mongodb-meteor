@@ -1,4 +1,4 @@
-See https://hub.docker.com/_/mongo/
+Using https://github.com/mvertes/docker-alpine-mongo for a tiny mongo image.
 
 This adds a replica set `rs0`.
 
