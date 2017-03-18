@@ -19,6 +19,9 @@ mongo local --eval "rs.conf()"
 sleep 2
 mongo admin --eval "db.shutdownServer({force: 1});"
 
+echo "[x] Waiting for MongoDB to stop"
+while mongo --eval "db.version()" > /dev/null 2>&1; do sleep 0.1; done
+
 # make sure this script is only run once
 touch /data/db/.init_done
 
