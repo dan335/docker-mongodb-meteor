@@ -1,13 +1,8 @@
-FROM mongo:latest
-MAINTAINER Daniel Phillips (http://danp.us)
+FROM mvertes/alpine-mongo:3.2.3
+MAINTAINER Zadkiel Aslafy-Aharonian
 
-# timezone
-RUN echo "Etc/UTC" > /etc/timezone && \
-    dpkg-reconfigure -f noninteractive tzdata
+COPY repl_init.sh run.sh /root/
+RUN chmod +x /root/*.sh
 
-COPY replInit.sh /replInit.sh
-COPY mongo.sh /mongo.sh
-RUN chmod 755 /replInit.sh
-RUN chmod 755 /mongo.sh
-
-CMD ["/mongo.sh"]
+ENTRYPOINT /root/run.sh
+CMD mongod
