@@ -14,10 +14,8 @@ while ! mongo --eval "db.version()" > /dev/null 2>&1; do sleep 0.1; done
 
 echo "[x] Initializing replicaset"
 mongo local --eval "rs.initiate()"
-sleep 2
-mongo local --eval "rs.conf()"
-sleep 2
-mongo admin --eval "db.shutdownServer();"
+sleep 3
+kill -2 %1
 
 echo "[x] Waiting for MongoDB to stop"
 while mongo --eval "db.version()" > /dev/null 2>&1; do sleep 0.1; done
