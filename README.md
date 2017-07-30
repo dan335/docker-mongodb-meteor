@@ -1,5 +1,7 @@
 See https://hub.docker.com/_/mongo/
 
+https://hub.docker.com/r/dan335/mongodb-meteor/
+
 This adds a replica set for Meteor.  Meteor > 1.4 required.
 
 ```
