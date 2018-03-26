@@ -3,5 +3,5 @@
 sleep 2
 ./replInit.sh
 sleep 2
-cmd="mongod --replSet rs0 --storageEngine wiredTiger"
+cmd="mongod --replSet rs0 --directoryperdb false --storageEngine wiredTiger"
 exec $cmd
