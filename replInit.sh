@@ -7,7 +7,7 @@ fi
 
 echo "--- Starting MongoDB setup. ---"
 
-mongod --replSet rs0 --oplogSize 1073741824 --bind_ip_all --storageEngine wiredTiger &
+mongod --replSet rs0 --oplogSize 1073741824 --storageEngine wiredTiger &
 
 # wait for mongod to start
 RET=1
