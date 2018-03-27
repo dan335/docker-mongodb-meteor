@@ -1,4 +1,4 @@
-FROM mongo:latest
+FROM mongo:3.4
 MAINTAINER Daniel Phillips (http://danp.us)
 
 # timezone
